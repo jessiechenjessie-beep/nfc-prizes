@@ -1,0 +1,14 @@
+PUBLIC_URL/?card=1
+PUBLIC_URL/?card=2
+PUBLIC_URL/?card=3
+PUBLIC_URL/?card=4
+PUBLIC_URL/?card=5
+PUBLIC_URL/?card=6
+PUBLIC_URL/?card=7
+PUBLIC_URL/?card=8
+PUBLIC_URL/?card=9
+PUBLIC_URL/?card=10
+PUBLIC_URL/?card=11
+PUBLIC_URL/?card=12
+PUBLIC_URL/?card=13
+PUBLIC_URL/?card=14
