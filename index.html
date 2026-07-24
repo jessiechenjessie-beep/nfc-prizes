@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6c3cff" />
+    <meta name="description" content="Tap an NFC prize card to reveal a cheerful classroom prize." />
+    <title>NFC Prize Winner</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Confetti pieces are added here by JavaScript. -->
+    <div id="confetti-layer" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="prize-card" aria-labelledby="main-heading">
+        <div class="emoji-row" aria-hidden="true">
+          <span>⭐</span><span class="trophy">🏆</span><span>🎁</span>
+        </div>
+        <p class="eyebrow">YOU FOUND A LUCKY CARD!</p>
+        <h1 id="main-heading">Congratulations!</h1>
+
+        <div id="valid-prize">
+          <p id="prize-number" class="prize-number">Prize #1</p>
+          <p id="prize-message" class="prize-message" aria-live="polite"></p>
+        </div>
+
+        <div id="error-prize" class="error-box" hidden>
+          <p id="error-message">Oops! This NFC card has not been set up correctly. Please ask your teacher for help.</p>
+          <a class="button button-primary" href="?card=1">Test Prize #1</a>
+        </div>
+
+        <div id="celebration-actions" class="button-group">
+          <button id="celebrate-button" class="button button-primary" type="button">🎉 Celebrate Again</button>
+          <button id="sound-button" class="button button-secondary" type="button">🔊 Play Winner Sound</button>
+        </div>
+        <p class="small-note">Show this screen to your teacher to collect your prize!</p>
+      </section>
+    </main>
+
+    <noscript><p class="noscript-message">This prize page needs JavaScript. Please ask your teacher for help.</p></noscript>
+  </body>
+</html>
