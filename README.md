@@ -12,10 +12,10 @@ https://example.com/?card=7
 ```
 
 When the page opens, `script.js` reads `card`, checks that it is a whole number
-from 1 to 14, looks up the text in `PRIZE_MESSAGES`, and displays the prize. An
+from 1 to 20, looks up the text in `PRIZE_MESSAGES`, and displays the prize. An
 invalid value shows the teacher-help message and a **Test Prize #1** button.
 
-## 2. Test all 14 card URLs locally
+## 2. Test all 20 card URLs locally
 
 Opening `index.html` directly usually works, but a local server is more accurate.
 
@@ -26,8 +26,8 @@ Opening `index.html` directly usually works, but a local server is more accurate
 3. Right-click `index.html`, then choose **Open with Live Server**.
 4. If the address is `http://127.0.0.1:5500/`, test
    `http://127.0.0.1:5500/?card=1`.
-5. Change the final number to test cards 2 through 14.
-6. Test the address without `?card=` and with `?card=15` for the error screen.
+5. Change the final number to test cards 2 through 20.
+6. Test the address without `?card=` and with `?card=21` for the error screen.
 
 ### Python
 
@@ -37,14 +37,14 @@ In a terminal opened inside this folder, run:
 python3 -m http.server 8000
 ```
 
-Visit `http://localhost:8000/?card=1`, change the number through 14, and press
+Visit `http://localhost:8000/?card=1`, change the number through 20, and press
 `Ctrl+C` when finished.
 
 ## 3. Edit the messages
 
 Open `script.js`. Near the top is the clearly labeled `PRIZE_MESSAGES` object.
 Change only the message inside the quotation marks after each number. Keep the
-numbers 1 through 14 unchanged. Save the file and refresh the browser.
+numbers 1 through 20 unchanged. Save the file and refresh the browser.
 
 ## 4. Publish free with GitHub Pages
 
@@ -70,7 +70,7 @@ https://YOUR-GITHUB-NAME.github.io/nfc-prizes
 
 Copy the exact address GitHub shows and open it on a phone.
 
-## 6. Create the 14 NFC URLs
+## 6. Create the 20 NFC URLs
 
 Open `nfc-urls.txt`. Use **Find and Replace** to replace every occurrence of:
 
@@ -91,7 +91,7 @@ https://YOUR-GITHUB-NAME.github.io/nfc-prizes/?card=1
 3. Paste the complete URL for card 1 and choose **OK → Write**.
 4. Hold the NFC card near the phone until writing is confirmed.
 5. Label the physical card `1`.
-6. Repeat with the matching URL for cards 2 through 14.
+6. Repeat with the matching URL for cards 2 through 20.
 
 Use an `https://` URL and test every card. Menu wording may vary slightly by
 phone and app version.
@@ -123,7 +123,7 @@ changes.
 
 ### Every card
 
-- Test all 14 cards one by one.
+- Test all 20 cards one by one.
 - Confirm the physical label matches the on-screen prize number.
 - Check readability in portrait orientation.
-- Test `?card=15` once to verify the teacher-help screen.
+- Test `?card=21` once to verify the teacher-help screen.
