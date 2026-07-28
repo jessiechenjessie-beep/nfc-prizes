@@ -3,7 +3,7 @@
 /*
  * PRIZE MESSAGES
  * Edit the text below whenever you want to change a prize message.
- * Keep the numbers 1 through 14 so they continue to match the NFC URLs.
+ * Keep the numbers 1 through 20 so they continue to match the NFC URLs.
  */
 const PRIZE_MESSAGES = {
   1: "Congratulations! You won a prize! Please try not to scream like a chicken.",
@@ -20,6 +20,12 @@ const PRIZE_MESSAGES = {
   12: "You won a prize! Please say, “I am awesome!” in English.",
   13: "Amazing! This card thinks you are cooler than ice cream.",
   14: "Congratulations! You found the lucky card. Now go collect your treasure.",
+  15: "Fantastic! Your prize radar is working perfectly today.",
+  16: "Hooray! You are so lucky, even the dictionary is impressed.",
+  17: "Congratulations! This card has officially crowned you a prize champion.",
+  18: "You won! Please collect your prize before it learns to run away.",
+  19: "Brilliant! Your lucky English word today is “winner.”",
+  20: "Jackpot! You found Prize #20. Give yourself a superhero pose.",
 };
 
 const confettiLayer = document.querySelector("#confetti-layer");
@@ -31,7 +37,7 @@ const actions = document.querySelector("#celebration-actions");
 const celebrateButton = document.querySelector("#celebrate-button");
 const soundButton = document.querySelector("#sound-button");
 
-/** Read ?card= and accept only one whole number from 1 to 14. */
+/** Read ?card= and accept only one whole number from 1 to 20. */
 function getCardNumber() {
   const parameters = new URLSearchParams(window.location.search);
   const cardValues = parameters.getAll("card");
@@ -39,7 +45,7 @@ function getCardNumber() {
   if (cardValues.length !== 1 || !/^\d+$/.test(cardValues[0])) return null;
 
   const card = Number(cardValues[0]);
-  return Number.isInteger(card) && card >= 1 && card <= 14 ? card : null;
+  return Number.isInteger(card) && card >= 1 && card <= 20 ? card : null;
 }
 
 function showPrize(card) {
